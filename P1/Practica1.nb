@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23205,        537]
-NotebookOptionsPosition[     21329,        503]
-NotebookOutlinePosition[     21748,        520]
-CellTagsIndexPosition[     21705,        517]
+NotebookDataLength[     20629,        486]
+NotebookOptionsPosition[     19213,        455]
+NotebookOutlinePosition[     19632,        472]
+CellTagsIndexPosition[     19589,        469]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -247,14 +247,15 @@ Normal de Greibach si sus producciones toman la siguiente forma: A -> \
 \[Alpha]\[Beta]: A \[Epsilon]  N, \[Alpha] \[Epsilon] T , \[Beta] \[Epsilon] \
 N*.
 Implementar un m\[OAcute]dulo que, tomando como entrada una gram\[AAcute]tica \
-incontextual devuelva True si est\[AAcute] en FOrma Normal de Greibach y \
+incontextual devuelva True si est\[AAcute] en Forma Normal de Greibach y \
 False en caso contrario\
 \>", "Text",
  CellFrame->{{0, 0}, {2, 0}},
  CellChangeTimes->{{3.761324430255891*^9, 3.761324470746025*^9}, {
   3.761324531800541*^9, 3.76132459676267*^9}, {3.761324671827681*^9, 
-  3.761324759953319*^9}, {3.761324902018651*^9, 
-  3.761324908393127*^9}},ExpressionUUID->"ae5f5ffd-844b-4540-b1a5-\
+  3.761324759953319*^9}, {3.761324902018651*^9, 3.761324908393127*^9}, {
+  3.761333038692412*^9, 
+  3.7613330389623127`*^9}},ExpressionUUID->"ae5f5ffd-844b-4540-b1a5-\
 aaeb4b9c75f1"],
 
 Cell[CellGroupData[{
@@ -298,9 +299,12 @@ Cell[BoxData[{
              RowBox[{"Length", "[", "consecuentes", "]"}]}], ",", " ", 
             RowBox[{"j", "++"}], ",", "\n", "\t\t", 
             RowBox[{
+             RowBox[{"Print", "[", 
+              RowBox[{"consecuentes", "[", 
+               RowBox[{"[", "j", "]"}], "]"}], "]"}], ";", "\n", "\t\t", 
              RowBox[{"terminales", " ", "=", " ", 
               RowBox[{"Append", "[", 
-               RowBox[{"auxiliares", ",", " ", 
+               RowBox[{"terminales", ",", " ", 
                 RowBox[{"First", "[", 
                  RowBox[{"consecuentes", "[", 
                   RowBox[{"[", "j", "]"}], "]"}], "]"}]}], "]"}]}], ";", "\n",
@@ -352,8 +356,9 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"{", "U", "}"}], ",", 
          RowBox[{"{", 
-          RowBox[{"b", ",", " ", "U", ",", " ", "U"}], "}"}]}], "}"}]}], 
-      "}"}], ",", "S"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"b", ",", " ", "U", ",", " ", "U"}], "}"}], "}"}]}], 
+        "}"}]}], "}"}], ",", "S"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"EsFormaNormalDeGreibach", "[", "gramatica2", "]"}]}], "Code",
  CellChangeTimes->{{3.76132399238888*^9, 3.761323993930567*^9}, {
    3.761325073671482*^9, 3.761325091329471*^9}, {3.7613251348209047`*^9, 
@@ -396,108 +401,55 @@ Cell[BoxData[{
    3.761332286670491*^9, 3.7613324556379623`*^9}, {3.761332491544857*^9, 
    3.7613324948762407`*^9}, {3.761332539577095*^9, 3.7613325474466143`*^9}, {
    3.761332606320199*^9, 3.761332679930084*^9}, {3.761332802090067*^9, 
-   3.761332826236463*^9}, {3.761332878819405*^9, 3.761332889497007*^9}},
- CellLabel->"In[55]:=",ExpressionUUID->"a572b41a-31e4-4767-80d8-31fc358fd3b2"],
+   3.761332826236463*^9}, {3.761332878819405*^9, 3.761332889497007*^9}, {
+   3.761332961571539*^9, 3.761332987050625*^9}, {3.761333023087472*^9, 
+   3.7613331276343317`*^9}, {3.761333176969985*^9, 3.7613332174388638`*^9}, {
+   3.761333279591687*^9, 3.7613333504218388`*^9}, {3.7613334660856333`*^9, 
+   3.761333535617112*^9}},ExpressionUUID->"a572b41a-31e4-4767-80d8-\
+31fc358fd3b2"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- TemplateBox[{
-  "First","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"First\\\", \\\"[\\\", \
-\\\"b\\\", \\\"]\\\"}]\\).\"",2,57,155,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881552722*^9},
+ RowBox[{"{", 
+  RowBox[{"a", ",", "U"}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.761333353188341*^9, {3.7613334730765247`*^9, 3.7613335194028788`*^9}},
  CellLabel->
   "During evaluation of \
-In[55]:=",ExpressionUUID->"5acc61db-ac36-4204-b70e-691abd6de4a4"],
+In[106]:=",ExpressionUUID->"4446eabe-07e2-44d1-88dd-fa08e2170a44"],
 
 Cell[BoxData[
- TemplateBox[{
-  "Rest","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"Rest\\\", \\\"[\\\", \
-\\\"b\\\", \\\"]\\\"}]\\).\"",2,57,156,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881559815*^9},
+ RowBox[{"{", 
+  RowBox[{"b", ",", "U"}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.761333353188341*^9, {3.7613334730765247`*^9, 3.761333519404059*^9}},
  CellLabel->
   "During evaluation of \
-In[55]:=",ExpressionUUID->"34188529-9249-4d11-a2c3-0356e0db9895"],
+In[106]:=",ExpressionUUID->"07e77155-b9cc-4d37-bef8-c31305020869"],
 
 Cell[BoxData[
- TemplateBox[{
-  "First","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"First\\\", \\\"[\\\", \
-\\\"U\\\", \\\"]\\\"}]\\).\"",2,57,157,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.7613328815663347`*^9},
+ RowBox[{"{", 
+  RowBox[{"b", ",", "U", ",", "U"}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.761333353188341*^9, {3.7613334730765247`*^9, 3.7613335194051943`*^9}},
  CellLabel->
   "During evaluation of \
-In[55]:=",ExpressionUUID->"deabd480-fc15-4595-8520-a51de9e840f9"],
+In[106]:=",ExpressionUUID->"6067136f-b377-447c-adfe-7a89743cbaf2"]
+}, Open  ]],
 
 Cell[BoxData[
- TemplateBox[{
-  "Rest","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"Rest\\\", \\\"[\\\", \
-\\\"U\\\", \\\"]\\\"}]\\).\"",2,57,158,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881572863*^9},
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "U", "}"}], ",", 
+   RowBox[{"{", "U", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"U", ",", "U"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.761333219796186*^9, {3.76133331245357*^9, 3.761333318118864*^9}, 
+   3.761333353194015*^9, {3.761333473086034*^9, 3.761333519405998*^9}},
  CellLabel->
-  "During evaluation of \
-In[55]:=",ExpressionUUID->"05ad0148-27db-4847-8e7c-355f625b5744"],
-
-Cell[BoxData[
- TemplateBox[{
-  "First","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"First\\\", \\\"[\\\", \
-\\\"U\\\", \\\"]\\\"}]\\).\"",2,57,159,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881578878*^9},
- CellLabel->
-  "During evaluation of \
-In[55]:=",ExpressionUUID->"8f228d48-c3e8-49a9-ad14-87e870b1fa75"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"First\\\", \\\"::\\\", \
-\\\"normal\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,57,160,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881585046*^9},
- CellLabel->
-  "During evaluation of \
-In[55]:=",ExpressionUUID->"4f2d1dc0-4e92-4188-ae3c-e44376704b7c"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Rest","normal",
-   "\"Nonatomic expression expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"Rest\\\", \\\"[\\\", \
-\\\"U\\\", \\\"]\\\"}]\\).\"",2,57,161,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.761332881590893*^9},
- CellLabel->
-  "During evaluation of \
-In[55]:=",ExpressionUUID->"940937c5-df95-47d0-9f01-b2246ca1471b"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Rest\\\", \\\"::\\\", \
-\\\"normal\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,57,162,29716560229471936771,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.761332628291802*^9, 3.7613328815969687`*^9},
- CellLabel->
-  "During evaluation of \
-In[55]:=",ExpressionUUID->"f753a8fe-a720-462f-970f-67e9b7f39647"],
-
-Cell[BoxData["False"], "Output",
- CellChangeTimes->{3.761332628333762*^9, 3.7613328816032553`*^9},
- CellLabel->"Out[57]=",ExpressionUUID->"2aea4445-1fc6-42f0-9c02-eb01f37f6017"]
+  "Out[108]=",ExpressionUUID->"59522c8c-ad7f-41f0-8dc9-300c3dfa34a8"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -525,18 +477,15 @@ Cell[8766, 220, 305, 5, 31, "Input",ExpressionUUID->"725715bd-1822-4ae8-a2c1-67c
 Cell[9074, 227, 236, 4, 31, "Input",ExpressionUUID->"98952715-8f2a-4442-a60c-c8976bc9e621"],
 Cell[CellGroupData[{
 Cell[9335, 235, 395, 6, 69, "Chapter",ExpressionUUID->"23cf9508-4119-4ae6-8bf7-2c424b83b5a3"],
-Cell[9733, 243, 733, 14, 68, "Text",ExpressionUUID->"ae5f5ffd-844b-4540-b1a5-aaeb4b9c75f1"],
+Cell[9733, 243, 784, 15, 68, "Text",ExpressionUUID->"ae5f5ffd-844b-4540-b1a5-aaeb4b9c75f1"],
 Cell[CellGroupData[{
-Cell[10491, 261, 6925, 138, 406, "Code",ExpressionUUID->"a572b41a-31e4-4767-80d8-31fc358fd3b2"],
-Cell[17419, 401, 458, 10, 22, "Message",ExpressionUUID->"5acc61db-ac36-4204-b70e-691abd6de4a4"],
-Cell[17880, 413, 456, 10, 22, "Message",ExpressionUUID->"34188529-9249-4d11-a2c3-0356e0db9895"],
-Cell[18339, 425, 460, 10, 22, "Message",ExpressionUUID->"deabd480-fc15-4595-8520-a51de9e840f9"],
-Cell[18802, 437, 456, 10, 22, "Message",ExpressionUUID->"05ad0148-27db-4847-8e7c-355f625b5744"],
-Cell[19261, 449, 458, 10, 22, "Message",ExpressionUUID->"8f228d48-c3e8-49a9-ad14-87e870b1fa75"],
-Cell[19722, 461, 468, 10, 22, "Message",ExpressionUUID->"4f2d1dc0-4e92-4188-ae3c-e44376704b7c"],
-Cell[20193, 473, 456, 10, 22, "Message",ExpressionUUID->"940937c5-df95-47d0-9f01-b2246ca1471b"],
-Cell[20652, 485, 469, 10, 22, "Message",ExpressionUUID->"f753a8fe-a720-462f-970f-67e9b7f39647"],
-Cell[21124, 497, 177, 2, 35, "Output",ExpressionUUID->"2aea4445-1fc6-42f0-9c02-eb01f37f6017"]
+Cell[10542, 262, 7345, 146, 428, "Code",ExpressionUUID->"a572b41a-31e4-4767-80d8-31fc358fd3b2"],
+Cell[CellGroupData[{
+Cell[17912, 412, 273, 7, 25, "Print",ExpressionUUID->"4446eabe-07e2-44d1-88dd-fa08e2170a44"],
+Cell[18188, 421, 271, 7, 25, "Print",ExpressionUUID->"07e77155-b9cc-4d37-bef8-c31305020869"],
+Cell[18462, 430, 283, 7, 25, "Print",ExpressionUUID->"6067136f-b377-447c-adfe-7a89743cbaf2"]
+}, Open  ]],
+Cell[18760, 440, 425, 11, 35, "Output",ExpressionUUID->"59522c8c-ad7f-41f0-8dc9-300c3dfa34a8"]
 }, Open  ]]
 }, Open  ]]
 }
