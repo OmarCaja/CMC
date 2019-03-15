@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     51621,       1205]
-NotebookOptionsPosition[     48373,       1140]
-NotebookOutlinePosition[     48792,       1157]
-CellTagsIndexPosition[     48749,       1154]
+NotebookDataLength[     57893,       1334]
+NotebookOptionsPosition[     54514,       1266]
+NotebookOutlinePosition[     54933,       1283]
+CellTagsIndexPosition[     54890,       1280]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -817,15 +817,13 @@ que se indican al final, obtenga como salida una gram\[AAcute]tica \
 equivalente lineal por la derecha A ->\[Alpha]\[Beta] \[Alpha] ",
  Cell[BoxData[
   FormBox[
-   SuperscriptBox["\[Epsilon]T", "*"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SuperscriptBox["\[Epsilon]T", "*"], TraditionalForm]],ExpressionUUID->
   "9670e8d5-b78b-4e91-b2e0-57d806d5d042"],
  ",A,B\[Epsilon]N  A->\[Alpha]  ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[Alpha]\[Epsilon]T", "*"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "d334f509-d830-4d58-8eb5-a6079155c861"],
+  ExpressionUUID->"d334f509-d830-4d58-8eb5-a6079155c861"],
  ",A\[Epsilon]N"
 }], "Text",
  CellChangeTimes->{{3.7614069846116323`*^9, 3.761406985208167*^9}, {
@@ -833,94 +831,124 @@ equivalente lineal por la derecha A ->\[Alpha]\[Beta] \[Alpha] ",
   3.7614592379951763`*^9}},ExpressionUUID->"f9a43b54-0932-405c-9db6-\
 cb21b031047e"],
 
-Cell[BoxData[
+Cell[CellGroupData[{
+
+Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"gramaticaEquivalenteLinealPorLaDerecha", "[", "gramatica_", "]"}],
-    " ", ":=", " ", 
-   RowBox[{"Module", "[", 
+   RowBox[{
     RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-      "i", ",", " ", "j", ",", " ", "k", ",", " ", "auxiliares", ",", " ", 
-       "terminales", ",", " ", "producciones", ",", " ", "inicial", ",", " ", 
-       "antecedente", ",", " ", "consecuentes", ",", " ", "consecuente", ",", 
-       " ", "consecuentesDer", ",", " ", "produccionesDer", ",", " ", 
-       "auxiliar", ",", " ", "produccion"}], "}"}], ",", "\n", "\t", 
+    "gramaticaEquivalenteLinealPorLaDerecha", "[", "gramatica_", "]"}], " ", ":=",
+     " ", 
+    RowBox[{"Module", "[", 
      RowBox[{
-      RowBox[{"auxiliares", " ", "=", " ", 
-       RowBox[{"gramatica", "[", 
-        RowBox[{"[", "1", "]"}], "]"}]}], ";", "\n", "\t", 
-      RowBox[{"terminales", " ", "=", " ", 
-       RowBox[{"gramatica", "[", 
-        RowBox[{"[", "2", "]"}], "]"}]}], ";", "\n", "\t", 
-      RowBox[{"producciones", " ", "=", " ", 
-       RowBox[{"gramatica", "[", 
-        RowBox[{"[", "3", "]"}], "]"}]}], ";", "\n", "\t", 
-      RowBox[{"inicial", " ", "=", " ", 
-       RowBox[{"gramatica", "[", 
-        RowBox[{"[", "4", "]"}], "]"}]}], ";", "\n", "\t", 
-      RowBox[{"consecuentesDer", " ", "=", " ", 
-       RowBox[{"{", "}"}]}], ";", "\n", "\t", 
-      RowBox[{"produccion", " ", "=", " ", 
-       RowBox[{"{", "}"}]}], ";", "\n", "\t", 
-      RowBox[{"produccionesDer", " ", "=", " ", 
-       RowBox[{"{", "}"}]}], ";", "\n", "\n", "    ", 
-      RowBox[{"For", "[", 
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
-        RowBox[{"i", " ", "<=", " ", 
-         RowBox[{"Length", "[", "producciones", "]"}]}], ",", " ", 
-        RowBox[{"i", "++"}], ",", "\n", "    \t", 
+       "i", ",", " ", "j", ",", " ", "k", ",", " ", "auxiliares", ",", " ", 
+        "terminales", ",", " ", "producciones", ",", " ", "inicial", ",", " ",
+         "antecedente", ",", " ", "consecuentes", ",", " ", "consecuente", 
+        ",", " ", "consecuentesDer", ",", " ", "produccionesDer", ",", " ", 
+        "auxiliar", ",", " ", "produccion", ",", " ", "count"}], "}"}], ",", 
+      "\n", "\t", 
+      RowBox[{
+       RowBox[{"auxiliares", " ", "=", " ", 
+        RowBox[{"gramatica", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"terminales", " ", "=", " ", 
+        RowBox[{"gramatica", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"producciones", " ", "=", " ", 
+        RowBox[{"gramatica", "[", 
+         RowBox[{"[", "3", "]"}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"inicial", " ", "=", " ", 
+        RowBox[{"gramatica", "[", 
+         RowBox[{"[", "4", "]"}], "]"}]}], ";", "\n", "\t", 
+       RowBox[{"consecuentesDer", " ", "=", " ", 
+        RowBox[{"{", "}"}]}], ";", "\n", "\t", 
+       RowBox[{"produccion", " ", "=", " ", 
+        RowBox[{"{", "}"}]}], ";", "\n", "\t", 
+       RowBox[{"produccionesDer", " ", "=", " ", 
+        RowBox[{"{", "}"}]}], ";", "\n", "\t", 
+       RowBox[{"count", " ", "=", " ", "0"}], ";", "\n", "\n", "    ", 
+       RowBox[{"For", "[", 
         RowBox[{
-         RowBox[{"antecedente", " ", "=", " ", 
-          RowBox[{
-           RowBox[{"producciones", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}]}], ";", "\n", "    \t", 
-         RowBox[{"consecuentes", " ", "=", " ", 
-          RowBox[{
-           RowBox[{"producciones", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], "[", 
-           RowBox[{"[", "2", "]"}], "]"}]}], ";", "\n", "    \t", 
-         RowBox[{"For", "[", 
-          RowBox[{
-           RowBox[{"j", " ", "=", " ", "1"}], ",", " ", 
-           RowBox[{"j", " ", "<=", " ", 
-            RowBox[{"Length", "[", "consecuentes", "]"}]}], ",", " ", 
-           RowBox[{"j", "++"}], ",", "\n", "    \t\t", 
+         RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+         RowBox[{"i", " ", "<=", " ", 
+          RowBox[{"Length", "[", "producciones", "]"}]}], ",", " ", 
+         RowBox[{"i", "++"}], ",", "\n", "    \t", 
+         RowBox[{
+          RowBox[{"antecedente", " ", "=", " ", 
            RowBox[{
-            RowBox[{"consecuente", " ", "=", " ", 
-             RowBox[{"consecuentes", "[", 
-              RowBox[{"[", "j", "]"}], "]"}]}], ";", "\n", "    \t\t", 
-            RowBox[{"If", "[", 
-             RowBox[{
+            RowBox[{"producciones", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\n", "    \t", 
+          RowBox[{"consecuentes", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"producciones", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\n", "    \t", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"j", " ", "=", " ", "1"}], ",", " ", 
+            RowBox[{"j", " ", "<=", " ", 
+             RowBox[{"Length", "[", "consecuentes", "]"}]}], ",", " ", 
+            RowBox[{"j", "++"}], ",", "\n", "    \t\t", 
+            RowBox[{
+             RowBox[{"consecuente", " ", "=", " ", 
+              RowBox[{"consecuentes", "[", 
+               RowBox[{"[", "j", "]"}], "]"}]}], ";", "\n", "    \t\t", 
+             RowBox[{"If", "[", 
               RowBox[{
-               RowBox[{"Length", "[", "consecuente", "]"}], " ", "==", " ", 
-               "0"}], ",", "\n", "    \t\t\t\t", 
+               RowBox[{
+                RowBox[{"Length", "[", "consecuente", "]"}], " ", "==", " ", 
+                "0"}], ",", "\n", "    \t\t\t\t", 
+               RowBox[{
+                RowBox[{"AppendTo", "[", 
+                 RowBox[{"consecuentesDer", ",", " ", 
+                  RowBox[{"{", "}"}]}], "]"}], ";"}]}], "\t", "\n", 
+              "    \t\t", "]"}], ";", "\n", "    \t\t", 
+             RowBox[{"If", "[", 
               RowBox[{
-               RowBox[{"AppendTo", "[", 
-                RowBox[{"consecuentesDer", ",", " ", 
-                 RowBox[{"{", "}"}]}], "]"}], ";"}]}], "\t", "\n", "    \t\t",
-              "]"}], ";", "\n", "    \t\t", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"Length", "[", "consecuente", "]"}], " ", ">", " ", 
-               "0"}], ",", "\n", "    \t\t\t", 
-              RowBox[{
-               RowBox[{"If", "[", 
-                RowBox[{
-                 RowBox[{"MemberQ", "[", 
-                  RowBox[{"auxiliares", ",", " ", 
-                   RowBox[{"Last", "[", "consecuente", "]"}]}], "]"}], ",", 
-                 "\n", "    \t\t\t\t", 
+               RowBox[{
+                RowBox[{"Length", "[", "consecuente", "]"}], " ", ">", " ", 
+                "0"}], ",", "\n", "    \t\t\t", 
+               RowBox[{
+                RowBox[{"If", "[", 
                  RowBox[{
-                  RowBox[{"auxiliar", " ", "=", " ", 
-                   RowBox[{"Last", "[", "consecuente", "]"}]}], ";", "\n", 
-                  "    \t\t\t\t", 
-                  RowBox[{"For", "[", 
-                   RowBox[{
+                  RowBox[{"MemberQ", "[", 
+                   RowBox[{"auxiliares", ",", " ", 
+                    RowBox[{"Last", "[", "consecuente", "]"}]}], "]"}], ",", 
+                  "\n", "    \t\t\t\t", 
+                  RowBox[{
+                   RowBox[{"auxiliar", " ", "=", " ", 
+                    RowBox[{"Last", "[", "consecuente", "]"}]}], ";", "\n", 
+                   "    \t\t\t\t", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "consecuente", "]"}], " ", "==", 
+                    " ", "1"}], ",", "\n", "    \t\t\t\t\t", 
+                    RowBox[{
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"consecuentesDer", ",", " ", 
+                    RowBox[{"{", "auxiliar", "}"}]}], "]"}], ";", "\n", 
+                    "    \t\t\t\t\t", 
+                    RowBox[{"PrependTo", "[", 
+                    RowBox[{"produccion", ",", " ", "antecedente"}], "]"}], 
+                    ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccion", ",", " ", "consecuentesDer"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccionesDer", ",", " ", "produccion"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"produccion", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"consecuentesDer", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";"}]}], "\n", "    \t\t\t\t", 
+                    "]"}], ";", "\n", "    \t\t\t\t", 
+                   RowBox[{"For", "[", 
+                    RowBox[{
                     RowBox[{"k", " ", "=", " ", "1"}], ",", " ", 
                     RowBox[{"k", " ", "<", " ", 
                     RowBox[{
@@ -934,21 +962,32 @@ Cell[BoxData[
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"consecuente", "[", 
-                    RowBox[{"[", "k", "]"}], "]"}], ",", " ", "antecedente"}],
-                     "}"}], "]"}]}], "]"}], ";"}]}], "\n", "    \t\t\t\t", 
-                   "]"}], ";", "\n", "    \t\t\t\t", 
-                  RowBox[{"If", "[", 
-                   RowBox[{
-                    RowBox[{
-                    RowBox[{"Length", "[", "consecuente", "]"}], " ", "==", 
-                    " ", "1"}], ",", "\n", "    \t\t\t\t\t", 
-                    RowBox[{
+                    RowBox[{"[", "k", "]"}], "]"}], ",", " ", "count"}], 
+                    "}"}], "]"}]}], "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"PrependTo", "[", 
+                    RowBox[{"produccion", ",", " ", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", "antecedente", "}"}], "]"}]}], "]"}], ";", 
+                    "\n", "    \t\t\t\t\t", 
                     RowBox[{"AppendTo", "[", 
-                    RowBox[{"consecuentesDer", ",", " ", 
-                    RowBox[{"{", "auxiliar", "}"}]}], "]"}], ";"}]}], "\n", 
-                   "    \t\t\t\t", "]"}], ";", "\n", "    \t\t\t\t", 
-                  RowBox[{"If", "[", 
-                   RowBox[{
+                    RowBox[{"produccion", ",", " ", "consecuentesDer"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccionesDer", ",", " ", "produccion"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"auxiliares", ",", " ", "count"}], "]"}], ";", 
+                    "\n", "    \t\t\t\t\t", 
+                    RowBox[{"antecedente", " ", "=", " ", "count"}], ";", 
+                    "\n", "    \t\t\t\t\t", 
+                    RowBox[{"count", "++"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"produccion", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"consecuentesDer", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";"}]}], "\n", "    \t\t\t\t", 
+                    "]"}], ";", "\n", "    \t\t\t\t", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{"Length", "[", "consecuente", "]"}], " ", ">", 
                     " ", "1"}], ",", "\n", "    \t\t\t\t\t", 
@@ -962,23 +1001,58 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"Length", "[", "consecuente", "]"}], " ", "-", 
                     " ", "1"}], "]"}], "]"}], ",", " ", "auxiliar"}], "}"}]}],
-                     "]"}], ";"}]}], "\n", "    \t\t\t\t", "]"}], ";", "\n", 
-                  "    \t\t\t\t", 
-                  RowBox[{"consecuentesDer", " ", "=", " ", 
-                   RowBox[{"Union", "[", 
-                    RowBox[{"consecuentesDer", ",", " ", "consecuentesDer"}], 
-                    "]"}]}], ";"}]}], "\n", "    \t\t\t", "]"}], ";", "\n", 
-               "    \t\t\t", 
-               RowBox[{"If", "[", 
-                RowBox[{
-                 RowBox[{"!", 
-                  RowBox[{"MemberQ", "[", 
-                   RowBox[{"auxiliares", ",", " ", 
-                    RowBox[{"Last", "[", "consecuente", "]"}]}], "]"}]}], ",",
-                  "\n", "    \t\t\t\t", 
+                     "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"PrependTo", "[", 
+                    RowBox[{"produccion", ",", " ", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", "antecedente", "}"}], "]"}]}], "]"}], ";", 
+                    "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccion", ",", " ", "consecuentesDer"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccionesDer", ",", " ", "produccion"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"produccion", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"consecuentesDer", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";"}]}], "\n", "    \t\t\t\t", 
+                    "]"}], ";"}]}], "\n", "    \t\t\t", "]"}], ";", "\n", 
+                "    \t\t\t", 
+                RowBox[{"If", "[", 
                  RowBox[{
-                  RowBox[{"For", "[", 
-                   RowBox[{
+                  RowBox[{"!", 
+                   RowBox[{"MemberQ", "[", 
+                    RowBox[{"auxiliares", ",", " ", 
+                    RowBox[{"Last", "[", "consecuente", "]"}]}], "]"}]}], ",",
+                   "\n", "    \t\t\t\t", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "consecuente", "]"}], " ", "==", 
+                    " ", "0"}], ",", "\n", "    \t\t\t\t\t", 
+                    RowBox[{
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"consecuentesDer", ",", " ", 
+                    RowBox[{"{", "auxiliar", "}"}]}], "]"}], ";", "\n", 
+                    "    \t\t\t\t\t", 
+                    RowBox[{"PrependTo", "[", 
+                    RowBox[{"produccion", ",", " ", "antecedente"}], "]"}], 
+                    ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccion", ",", " ", "consecuentesDer"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"produccionesDer", ",", " ", "produccion"}], 
+                    "]"}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"produccion", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";", "\n", "    \t\t\t\t\t", 
+                    RowBox[{"consecuentesDer", " ", "=", " ", 
+                    RowBox[{"{", "}"}]}], ";"}]}], "\n", "    \t\t\t\t", 
+                    "]"}], ";", "\n", "    \t\t\t\t", 
+                   RowBox[{"For", "[", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{"k", " ", "=", " ", "1"}], ";", " ", 
                     RowBox[{"k", " ", "<", " ", 
@@ -993,41 +1067,44 @@ Cell[BoxData[
                     RowBox[{"consecuente", "[", 
                     RowBox[{"[", "k", "]"}], "]"}], ",", " ", "antecedente"}],
                      "}"}], "]"}]}], "]"}], ";"}]}], "\n", "    \t\t\t\t", 
-                   "]"}], ";", "\n", "    \t\t\t\t", 
-                  RowBox[{"AppendTo", "[", 
-                   RowBox[{"consecuentesDer", ",", " ", 
+                    "]"}], ";", "\n", "    \t\t\t\t", 
+                   RowBox[{"AppendTo", "[", 
+                    RowBox[{"consecuentesDer", ",", " ", 
                     RowBox[{"{", 
                     RowBox[{"consecuente", "[", 
                     RowBox[{"[", 
                     RowBox[{"Length", "[", "consecuente", "]"}], "]"}], "]"}],
-                     "}"}]}], "]"}], ";", "\n", "    \t\t\t", "\n", 
-                  "    \t\t\t\t", 
-                  RowBox[{"consecuentesDer", " ", "=", " ", 
-                   RowBox[{"Union", "[", 
-                    RowBox[{"consecuentesDer", ",", " ", "consecuentesDer"}], 
-                    "]"}]}], ";"}]}], "\n", "    \t\t\t", "]"}], ";"}]}], 
-             "\n", "    \t\t", "]"}], ";"}]}], "\n", "    \t", "]"}], ";", 
-         "\n", "    \t", 
-         RowBox[{"PrependTo", "[", 
-          RowBox[{"produccion", ",", " ", "antecedente"}], "]"}], ";", "\n", 
-         "    \t", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"produccion", ",", " ", "consecuentesDer"}], "]"}], ";", 
-         "\n", "    \t", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"produccionesDer", ",", " ", "produccion"}], "]"}], ";", 
-         "\n", "    \t", 
-         RowBox[{"produccion", " ", "=", " ", 
-          RowBox[{"{", "}"}]}], ";", "\n", "    \t", 
-         RowBox[{"consecuentesDer", " ", "=", " ", 
-          RowBox[{"{", "}"}]}], ";"}]}], "\n", "    ", "]"}], ";", "\n", 
-      "    ", 
-      RowBox[{"Return", "[", 
-       RowBox[{"{", 
-        RowBox[{
-        "auxiliares", ",", " ", "terminales", ",", " ", "produccionesDer", 
-         ",", " ", "inicial"}], "}"}], "]"}]}]}], "\n", "\n", "]"}]}], 
-  ";"}]], "Code",
+                     "}"}]}], "]"}], ";"}]}], "\n", "    \t\t\t", "]"}], 
+                ";"}]}], "\n", "    \t\t", "]"}], ";"}]}], "\n", "    \t", 
+           "]"}], ";"}]}], "\n", "    ", "]"}], ";", "\n", "    ", 
+       RowBox[{"auxiliares", " ", "=", " ", 
+        RowBox[{"Union", "[", 
+         RowBox[{"auxiliares", ",", " ", "auxiliares"}], "]"}]}], ";", "\n", 
+       "    ", 
+       RowBox[{"Return", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "auxiliares", ",", " ", "terminales", ",", " ", "produccionesDer", 
+          ",", " ", "inicial"}], "}"}], "]"}]}]}], "\n", "]"}]}], ";"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"gramaticaEjt", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"S", ",", "U"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "S", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"a", ",", "b", ",", "a", ",", "U"}], "}"}], "}"}]}], "}"}], 
+      "}"}], ",", "S"}], "}"}]}], ";"}], "\n", 
+ RowBox[{"gramaticaEquivalenteLinealPorLaDerecha", "[", "gramaticaEjt", 
+  "]"}]}], "Code",
  CellChangeTimes->{{3.761407060249655*^9, 3.7614071525740223`*^9}, {
    3.7614071846795273`*^9, 3.761407248917693*^9}, {3.7614072816683397`*^9, 
    3.761407282654907*^9}, {3.761407363892489*^9, 3.761407436572719*^9}, {
@@ -1063,8 +1140,57 @@ Cell[BoxData[
    3.761414310133305*^9}, {3.761414363544635*^9, 3.7614143688062572`*^9}, {
    3.761414404322435*^9, 3.761414408958164*^9}, {3.7614145628962708`*^9, 
    3.761414579325142*^9}, {3.7614146826781673`*^9, 3.76141468784651*^9}, 
-   3.76158648394588*^9},
- CellLabel->"In[4]:=",ExpressionUUID->"7854aa9e-9bb4-45e5-83cb-d4bdf5d8f382"],
+   3.76158648394588*^9, {3.761663958951353*^9, 3.761663970018796*^9}, {
+   3.761664975079599*^9, 3.761665042607329*^9}, {3.7616652266058702`*^9, 
+   3.761665230406908*^9}, {3.761665303539029*^9, 3.761665396316682*^9}, {
+   3.7616655952666407`*^9, 3.761665746083497*^9}, {3.7616659191493587`*^9, 
+   3.7616659209515963`*^9}, {3.761665962131716*^9, 3.761665981022379*^9}, {
+   3.761666129188813*^9, 3.761666131991928*^9}, {3.76166617176854*^9, 
+   3.76166625158095*^9}, {3.761666308235343*^9, 3.7616663940688953`*^9}, {
+   3.761666458380021*^9, 3.7616665325155478`*^9}, {3.761666612443592*^9, 
+   3.76166663506761*^9}, {3.7616666889429207`*^9, 3.761666696428377*^9}, {
+   3.761666818314583*^9, 3.761666819672338*^9}, {3.7616668729629717`*^9, 
+   3.761666891740766*^9}, {3.761666994484789*^9, 3.7616670109214582`*^9}, {
+   3.7616670418862753`*^9, 3.761667061737358*^9}, {3.761667098700712*^9, 
+   3.761667114473361*^9}, {3.76166721014228*^9, 
+   3.761667219545166*^9}},ExpressionUUID->"7854aa9e-9bb4-45e5-83cb-\
+d4bdf5d8f382"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "S", ",", "U"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "S", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "0"}], "}"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "0", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"b", ",", "1"}], "}"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", "1", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "U"}], "}"}], "}"}]}], "}"}]}], "}"}], ",", "S"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.7616657909795723`*^9, 3.761665791029715*^9}, 
+   3.761665995919039*^9, 3.761666285756981*^9, {3.7616663227579412`*^9, 
+   3.761666352707284*^9}, {3.76166638559976*^9, 3.761666396434956*^9}, 
+   3.761666538552764*^9, 3.761666821813545*^9, 3.761666940951379*^9, 
+   3.761667078202824*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"8c8a46c9-b4ee-498f-8e0e-6bd505057d0a"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1199,11 +1325,14 @@ Cell[32956, 796, 214, 5, 45, "Output",ExpressionUUID->"78e81924-c267-4547-821a-5
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[33219, 807, 156, 3, 69, "Chapter",ExpressionUUID->"b20cdcf1-c785-4464-b41b-85b34c31f5f1"],
-Cell[33378, 812, 957, 21, 58, "Text",ExpressionUUID->"f9a43b54-0932-405c-9db6-cb21b031047e"],
-Cell[34338, 835, 11793, 231, 1132, "Code",ExpressionUUID->"7854aa9e-9bb4-45e5-83cb-d4bdf5d8f382"],
+Cell[33378, 812, 891, 19, 58, "Text",ExpressionUUID->"f9a43b54-0932-405c-9db6-cb21b031047e"],
 Cell[CellGroupData[{
-Cell[46156, 1070, 1116, 31, 55, "Input",ExpressionUUID->"f941f42f-78b3-47d4-99c7-6a3d5ed6d61e"],
-Cell[47275, 1103, 1058, 32, 45, "Output",ExpressionUUID->"14f93590-0fd3-4dfb-85cf-0d10d6c41b75"]
+Cell[34294, 835, 16798, 321, 1616, "Code",ExpressionUUID->"7854aa9e-9bb4-45e5-83cb-d4bdf5d8f382"],
+Cell[51095, 1158, 1165, 33, 35, "Output",ExpressionUUID->"8c8a46c9-b4ee-498f-8e0e-6bd505057d0a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52297, 1196, 1116, 31, 55, "Input",ExpressionUUID->"f941f42f-78b3-47d4-99c7-6a3d5ed6d61e"],
+Cell[53416, 1229, 1058, 32, 45, "Output",ExpressionUUID->"14f93590-0fd3-4dfb-85cf-0d10d6c41b75"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
