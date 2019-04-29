@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     55978,       1278]
-NotebookOptionsPosition[     55027,       1253]
-NotebookOutlinePosition[     55361,       1268]
-CellTagsIndexPosition[     55318,       1265]
+NotebookDataLength[     56056,       1279]
+NotebookOptionsPosition[     55105,       1254]
+NotebookOutlinePosition[     55439,       1269]
+CellTagsIndexPosition[     55396,       1266]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Pr\[AAcute]ctica 2(1):", "Title",
+Cell["Pr\[AAcute]ctica 2(1) - Fundamentos b\[AAcute]sicos:", "Title",
  CellChangeTimes->{{3.761720630077016*^9, 3.76172064773765*^9}, {
    3.761721376979268*^9, 3.761721445105967*^9}, {3.761721507149254*^9, 
    3.761721514008596*^9}, 3.761721562007618*^9, {3.761721620455117*^9, 
@@ -50,8 +50,8 @@ Cell["Pr\[AAcute]ctica 2(1):", "Title",
    3.761727553555758*^9}, {3.761727685137742*^9, 3.7617276893873377`*^9}, {
    3.763048955352685*^9, 3.763048957333375*^9}, {3.763048990131475*^9, 
    3.763049034236433*^9}, {3.76304906662707*^9, 3.763049084170425*^9}, 
-   3.7630492751157827`*^9, 
-   3.7630493422934313`*^9},ExpressionUUID->"6e450291-11d3-4506-83e2-\
+   3.7630492751157827`*^9, 3.7630493422934313`*^9, {3.765523514170773*^9, 
+   3.765523521682674*^9}},ExpressionUUID->"6e450291-11d3-4506-83e2-\
 e3d7673b1a0f"],
 
 Cell["Autores: Jose Antonio Culla de Moya y Omar Caja Garcia", "Text",
@@ -115,7 +115,7 @@ Cell[BoxData[{
         "\[IndentingNewLine]", "\t", "]"}], ";", "\[IndentingNewLine]", "\t", 
        
        RowBox[{"Return", "[", "ruleList", "]"}], ";"}]}], 
-     "\[IndentingNewLine]", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -295,7 +295,7 @@ Cell[BoxData[
                 {"\<\"\"\>", 
                  AnimatorBox[Dynamic[$CellContext`i11$$], {1, 61, 1},
                   AnimationRate->1.0479720202240004`,
-                  AnimationRunTime->4.348776817321777,
+                  AnimationRunTime->0.,
                   AnimationRunning->False,
                   AnimationTimeIndex->4.348776817321777,
                   
@@ -327,6 +327,7 @@ Cell[BoxData[
              PaneBox[
               TagBox[
                PaneSelectorBox[{1->
+                
                 GraphicsBox[
                  RasterBox[{{0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 
                   0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0}}, {{0, 0}, {30, 
@@ -1251,9 +1252,9 @@ $CellContext`i11$3946$$}, "X1",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1855, 1025},
+WindowSize->{960, 1022},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
-FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+FrontEndVersion->"12.0 para Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1268,15 +1269,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 2280, 32, 98, "Title",ExpressionUUID->"6e450291-11d3-4506-83e2-e3d7673b1a0f"],
-Cell[2863, 56, 194, 3, 35, "Text",ExpressionUUID->"b526cfbd-855b-4600-9eaf-0ab522371e81"],
+Cell[580, 22, 2356, 32, 99, "Title",ExpressionUUID->"6e450291-11d3-4506-83e2-e3d7673b1a0f"],
+Cell[2939, 56, 194, 3, 36, "Text",ExpressionUUID->"b526cfbd-855b-4600-9eaf-0ab522371e81"],
 Cell[CellGroupData[{
-Cell[3082, 63, 157, 3, 69, "Chapter",ExpressionUUID->"b2c15336-6397-4d1d-85f8-9b9a59d6ac07"],
-Cell[3242, 68, 430, 9, 45, "Text",ExpressionUUID->"5b70c491-3f24-4ade-899f-918d82914cee"],
-Cell[3675, 79, 8212, 176, 736, "Code",ExpressionUUID->"6ccf9597-3ac8-4168-b805-e9a0588e20ba"],
+Cell[3158, 63, 157, 3, 70, "Chapter",ExpressionUUID->"b2c15336-6397-4d1d-85f8-9b9a59d6ac07"],
+Cell[3318, 68, 430, 9, 70, "Text",ExpressionUUID->"5b70c491-3f24-4ade-899f-918d82914cee"],
+Cell[3751, 79, 8212, 176, 736, "Code",ExpressionUUID->"6ccf9597-3ac8-4168-b805-e9a0588e20ba"],
 Cell[CellGroupData[{
-Cell[11912, 259, 740, 13, 31, "Input",ExpressionUUID->"5a88c180-a55f-408c-b764-eb934e308958"],
-Cell[12655, 274, 42332, 974, 118, "Output",ExpressionUUID->"1ecb8f35-8ce6-49d3-bae8-ec7e48a3bc78"]
+Cell[11988, 259, 740, 13, 55, "Input",ExpressionUUID->"5a88c180-a55f-408c-b764-eb934e308958"],
+Cell[12731, 274, 42334, 975, 118, "Output",ExpressionUUID->"1ecb8f35-8ce6-49d3-bae8-ec7e48a3bc78"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
