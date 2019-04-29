@@ -10,19 +10,20 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2530,         78]
-NotebookOptionsPosition[      1815,         57]
-NotebookOutlinePosition[      2149,         72]
-CellTagsIndexPosition[      2106,         69]
+NotebookDataLength[      2611,         79]
+NotebookOptionsPosition[      1895,         58]
+NotebookOutlinePosition[      2229,         73]
+CellTagsIndexPosition[      2186,         70]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Pr\[AAcute]ctica 2(2):", "Title",
- CellChangeTimes->{{3.765518254274829*^9, 
-  3.765518279588621*^9}},ExpressionUUID->"ce23034c-4930-409f-abc4-\
+Cell["Pr\[AAcute]ctica 2(2) - Reconocedores de Lenguajes:", "Title",
+ CellChangeTimes->{{3.765518254274829*^9, 3.765518279588621*^9}, {
+  3.765523455575296*^9, 
+  3.7655234625827217`*^9}},ExpressionUUID->"ce23034c-4930-409f-abc4-\
 057d66edad05"],
 
 Cell["Autores: Jose Antonio Culla de Moya y Omar Caja Garcia", "Text",
@@ -72,12 +73,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 165, 3, 99, "Title",ExpressionUUID->"ce23034c-4930-409f-abc4-057d66edad05"],
-Cell[748, 27, 195, 3, 36, "Text",ExpressionUUID->"359197f7-370d-4737-8062-dd4ac478d596"],
+Cell[580, 22, 245, 4, 99, "Title",ExpressionUUID->"ce23034c-4930-409f-abc4-057d66edad05"],
+Cell[828, 28, 195, 3, 36, "Text",ExpressionUUID->"359197f7-370d-4737-8062-dd4ac478d596"],
 Cell[CellGroupData[{
-Cell[968, 34, 159, 3, 70, "Chapter",ExpressionUUID->"0d7ae6e3-60e5-4832-94f4-f977dd1f986a"],
-Cell[1130, 39, 503, 9, 70, "Text",ExpressionUUID->"b8a20300-92c1-43b0-95d7-7ad31478beea"],
-Cell[1636, 50, 151, 3, 53, "Code",ExpressionUUID->"8207998f-ce33-49e3-9306-12bb46eee685"]
+Cell[1048, 35, 159, 3, 70, "Chapter",ExpressionUUID->"0d7ae6e3-60e5-4832-94f4-f977dd1f986a"],
+Cell[1210, 40, 503, 9, 70, "Text",ExpressionUUID->"b8a20300-92c1-43b0-95d7-7ad31478beea"],
+Cell[1716, 51, 151, 3, 53, "Code",ExpressionUUID->"8207998f-ce33-49e3-9306-12bb46eee685"]
 }, Open  ]]
 }, Open  ]]
 }
