@@ -10,31 +10,154 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1254,         50]
-NotebookOptionsPosition[       936,         33]
-NotebookOutlinePosition[      1289,         49]
-CellTagsIndexPosition[      1246,         46]
+NotebookDataLength[      7067,        182]
+NotebookOptionsPosition[      6127,        157]
+NotebookOutlinePosition[      6462,        172]
+CellTagsIndexPosition[      6419,        169]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{"practica", " ", "3", " ", "jose", " ", "culla", " ", "omar", " ", 
-  "caja"}]], "Input",
- CellChangeTimes->{{3.7666461556541653`*^9, 3.7666461659433603`*^9}}],
+Cell["Pr\[AAcute]ctica 3 - Computaci\[OAcute]n con membranas. Sistemas P.", \
+"Title",
+ CellChangeTimes->{{3.768053623999957*^9, 
+  3.768053660454349*^9}},ExpressionUUID->"843a9461-4ca2-4599-a95c-\
+5570889b9bab"],
+
+Cell["Autores: Jose Antonio Culla de Moya y Omar Caja Garcia", "Text",
+ CellChangeTimes->{{3.7680536724034233`*^9, 
+  3.7680536815702477`*^9}},ExpressionUUID->"edba80c8-433b-4c56-b122-\
+5738aa279045"],
+
+Cell[CellGroupData[{
+
+Cell["Ejercicio 3:", "Chapter",
+ CellChangeTimes->{{3.768053691951174*^9, 3.768053717238998*^9}, 
+   3.7680540159260263`*^9},ExpressionUUID->"ce405ede-fb31-44e8-ae60-\
+ed6294f9096a"],
+
+Cell["\<\
+Dise\[NTilde]e un m\[OAcute]dulo Mathematica que, dado como entrada un valor \
+entero n, proporcione como salida la configuraci\[OAcute]n del sistema P del \
+ejercicio 1(b) despu\[EAcute]s de aplicar n transiciones.\
+\>", "Text",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.768053722624592*^9, 3.7680538059991417`*^9}, 
+   3.768053869906457*^9},ExpressionUUID->"18ec818f-0474-4db3-8312-\
+8325b58f22ea"],
 
 Cell[BoxData[
- RowBox[{"3", " ", "caja", " ", "culla", " ", "jose", " ", "omar", " ", 
-  "practica"}]], "Output",
- CellChangeTimes->{3.766646167375414*^9}]
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ej3", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "membrana", ",", " ", "aux", ",", " ", "randomNumber", ",", " ", 
+       "result", ",", " ", "i"}], "}"}], ",", "\n", "\t", "\n", "\t", 
+     RowBox[{
+      RowBox[{"membrana", " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", " ", "a"}], "}"}]}], ";", "\n", "\t", 
+      RowBox[{"result", " ", "=", " ", 
+       RowBox[{"{", "}"}]}], ";", "\n", "\t", "\n", "\t", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+        RowBox[{"i", " ", "\[LessEqual]", " ", "n"}], ",", " ", 
+        RowBox[{"i", "++"}], ",", "\n", "\t", "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"aux", " ", "=", " ", 
+          RowBox[{"{", "}"}]}], ";", "\n", "\t\t", "\n", "\t\t", 
+         RowBox[{"While", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "membrana", "]"}], " ", ">", " ", "0"}], 
+           ",", "\n", "\t\t", "\n", "\t\t\t", 
+           RowBox[{
+            RowBox[{"randomNumber", " ", "=", " ", 
+             RowBox[{"RandomInteger", "[", "1", "]"}]}], ";", "\n", "\t\t", 
+            "\n", "\t\t\t", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"randomNumber", " ", "==", " ", "0"}], ",", "\n", 
+              "\t\t", "\n", "\t\t\t\t", 
+              RowBox[{
+               RowBox[{"membrana", " ", "=", " ", 
+                RowBox[{"Take", "[", 
+                 RowBox[{"membrana", ",", " ", 
+                  RowBox[{"-", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "membrana", "]"}], " ", "-", " ", 
+                    "1"}], ")"}]}]}], "]"}]}], ";", "\n", "\t\t\t\t", 
+               RowBox[{"AppendTo", "[", 
+                RowBox[{"aux", ",", " ", "a"}], "]"}], ";", "\n", "\t\t\t\t", 
+               
+               RowBox[{"result", " ", "=", " ", 
+                RowBox[{"Join", "[", 
+                 RowBox[{"result", ",", " ", 
+                  RowBox[{"{", 
+                   RowBox[{"b", ",", "c", ",", "c"}], "}"}]}], "]"}]}], 
+               ";"}]}], "\n", "\t\t\t", "]"}], ";", "\n", "\t\t\t", "\n", 
+            "\t\t\t", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"randomNumber", " ", "==", " ", "1"}], " ", "&&", " ", 
+               
+               RowBox[{
+                RowBox[{"Length", "[", "membrana", "]"}], " ", 
+                "\[GreaterEqual]", " ", "2"}]}], ",", "\n", "\t\t\t", "\n", 
+              "\t\t\t\t", 
+              RowBox[{
+               RowBox[{"membrana", " ", "=", " ", 
+                RowBox[{"Take", "[", 
+                 RowBox[{"membrana", ",", " ", 
+                  RowBox[{"-", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "membrana", "]"}], " ", "-", " ", 
+                    "2"}], ")"}]}]}], "]"}]}], ";"}]}], "\n", "\t\t\t", "]"}],
+             ";"}]}], "\n", "\t\t", "]"}], ";", "\n", "\t\t", 
+         RowBox[{"membrana", " ", "=", " ", "aux"}], ";"}]}], "\n", "\t", 
+       "]"}], ";", "\n", "\t", 
+      RowBox[{"Return", "[", "result", "]"}], ";"}]}], "\n", "]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.7680538804602547`*^9, 3.768053897118288*^9}, {
+  3.76805589005378*^9, 3.768055934798658*^9}, {3.768056017637532*^9, 
+  3.768056196669383*^9}, {3.768056323966963*^9, 3.768056359339039*^9}, {
+  3.76805643197512*^9, 3.7680565410806217`*^9}, {3.768056582985211*^9, 
+  3.768056737309061*^9}, {3.7680568747324743`*^9, 3.7680568782137127`*^9}, {
+  3.768056987220921*^9, 3.768056988182576*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5dfdec60-5098-49b8-90c2-64c93075f1c3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ej3", "[", "8", "]"}]], "Input",
+ CellChangeTimes->{{3.768056757847471*^9, 3.768056796636846*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"8b7b42a3-3ad0-4591-a628-bc252c05ad06"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c", 
+   ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", ",", 
+   "b", ",", "c", ",", "c"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.768056944135261*^9, {3.768057007066938*^9, 3.768057020931094*^9}},
+ CellLabel->"Out[2]=",ExpressionUUID->"c74e008d-44e7-4ee0-b00c-bd15e564f7f9"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{808, 595},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"11.0 para Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
-2016)",
+WindowSize->{1920, 1022},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.0 para Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -49,12 +172,19 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 182, 3, 32, "Input"],
-Cell[765, 27, 155, 3, 66, "Output"]
+Cell[580, 22, 212, 4, 99, "Title",ExpressionUUID->"843a9461-4ca2-4599-a95c-5570889b9bab"],
+Cell[795, 28, 200, 3, 36, "Text",ExpressionUUID->"edba80c8-433b-4c56-b122-5738aa279045"],
+Cell[CellGroupData[{
+Cell[1020, 35, 182, 3, 70, "Chapter",ExpressionUUID->"ce405ede-fb31-44e8-ae60-ed6294f9096a"],
+Cell[1205, 40, 420, 8, 46, "Text",ExpressionUUID->"18ec818f-0474-4db3-8312-8325b58f22ea"],
+Cell[1628, 50, 3818, 85, 670, "Code",ExpressionUUID->"5dfdec60-5098-49b8-90c2-64c93075f1c3"],
+Cell[CellGroupData[{
+Cell[5471, 139, 200, 3, 31, "Input",ExpressionUUID->"8b7b42a3-3ad0-4591-a628-bc252c05ad06"],
+Cell[5674, 144, 413, 8, 35, "Output",ExpressionUUID->"c74e008d-44e7-4ee0-b00c-bd15e564f7f9"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
