@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7067,        182]
-NotebookOptionsPosition[      6127,        157]
-NotebookOutlinePosition[      6462,        172]
-CellTagsIndexPosition[      6419,        169]
+NotebookDataLength[     11933,        272]
+NotebookOptionsPosition[     11350,        246]
+NotebookOutlinePosition[     11704,        262]
+CellTagsIndexPosition[     11661,        259]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,17 +26,108 @@ Cell["Pr\[AAcute]ctica 3 - Computaci\[OAcute]n con membranas. Sistemas P.", \
   3.768053660454349*^9}},ExpressionUUID->"843a9461-4ca2-4599-a95c-\
 5570889b9bab"],
 
-Cell["Autores: Jose Antonio Culla de Moya y Omar Caja Garcia", "Text",
- CellChangeTimes->{{3.7680536724034233`*^9, 
-  3.7680536815702477`*^9}},ExpressionUUID->"edba80c8-433b-4c56-b122-\
-5738aa279045"],
+Cell[TextData[{
+ "Autores: Jose Antonio Culla de Moya y Omar Caja Garcia\n\n\nEjercicio 1:\n\
+Especifique el conjunto de naturales calculado por cada uno de los siguientes \
+sistemas P\n\tA)\n\tDadas las reglas y la configuraci\[OAcute]n inicial \
+podemos ver que la regla 3 f-> ff se aplicar\[AAcute] tantas veces como \
+iteraciones se den hasta que se disuelva la membrana 3 por tanto en la \t\t\
+cadena habr\[AAcute] un n\[UAcute]mero par de f que depender\[AAcute] del \
+numero de iteraciones n, por tanto |f| = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Por otro lado la regla 1 y la 2 no podr\[AAcute]n ser aplicadas a la vez \
+ya \n\tque al inicio solo hay una a y tras la aplicaci\[OAcute]n de \
+cualquiera de las dos reglas quedar\[AAcute] una y solo una a de forma que la \
+aplicaci\[OAcute]n de la regla 1 consistir\[AAcute] en a\[NTilde]adir una b \
+dejando \t\tla a intacta y la aplicaci\[OAcute]n de la regla 2 consistir\
+\[AAcute] en a\[NTilde]adir una b disolviendo adem\[AAcute]s la membrana. Por \
+tanto, al disolverse la membrana 3 quedar\[AAcute] una cadena de la forma ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["b", "n"], 
+    SuperscriptBox["f", 
+     SuperscriptBox["2", "n"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\t\n\tEn la membrana 2 nos encontramos con 3 reglas, la regla \
+determinante ser\[AAcute] la regla 3 ya que marcar\[AAcute] el n\[UAcute]mero \
+de iteraciones que se realizan en esta membrana antes de \t\tsu disoluci\
+\[OAcute]n. Esta regla es opuesta a la anterior que a\[NTilde]ad\[IAcute]a f \
+de forma exponencial en potencias de 2, esta regla realiza el proceso inverso \
+de forma que el numero de f se reduce \t\tcon el logaritmo en base 2 del \
+numero de f hasta que solo queda 1 y es en ese momento cuando se aplica la \
+transici\[OAcute]n que disuelve la membrana. Por lo tanto se realizaran n \
+iteraciones ya que ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"log2", "(", 
+     SuperscriptBox["2", "n"], ")"}], "=", " ", "n"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". En la primera iteraci\[OAcute]n las b se transforman en d y en la \
+siguiente iteraci\[OAcute]n aparecen tantas e como d y el numero de d se \
+mantiene constante mientras que en cada iteraci\[OAcute]n se a\[NTilde]aden \
+tantas e como d haya, dicho de otra forma cada iteraci\[OAcute]n se \
+a\[NTilde]aden n e. Cuando se disuelva la membrana quedar\[AAcute] la cadena ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["d", "n"], 
+    SuperscriptBox["e", 
+     SuperscriptBox["n", "2"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " y de la membrana 1 se expulsar\[AAcute]n todas las d y solo quedaran e. \
+Por tanto el conjunto de naturales vendr\[AAcute] dado por n^2 / n \[Epsilon] \
+N y n >= 1. {1, 4, 9, 16, ...}\n\t{}\n\t\n\tB)\n\tEn este caso comenzamos en \
+la membrana 1 con la palabra aa y hay dos reglas que no pueden ser aplicadas \
+simult\[AAcute]neamente ya que la 2 requiere de las dos a por lo que al \t\t\
+aplicar la 1 ya no podemos aplicar la 2 ya que solo queda una a sobre la que \
+aplicar una regla. Aplicar la regla 2 implica expulsar las 2 a por lo que \
+finalizar\[AAcute] la ejecuci\[OAcute]n tras su \t\taplicaci\[OAcute]n \
+mientras que aplicar la regla 1 dejara dos a en la membrana 1 e introducir\
+\[AAcute] la cadena bccbcc en la membrana 2 por lo que el conjunto de \
+naturales obedecer\[AAcute] la \t\t\tsiguiente progresi\[OAcute]n aritm\
+\[EAcute]tica {0, 6, 12, 18, ...}\n\nEjercicio 2\n\nDado el siguiente sistema \
+P, establezca cu\[AAcute]ndo el sistema calcula como salida \
+\[OpenCurlyDoubleQuote]s\[CloseCurlyDoubleQuote] y\ncu\[AAcute]ndo calcula \
+como salida \[OpenCurlyDoubleQuote]n\[CloseCurlyDoubleQuote] (considere la \
+regi\[OAcute]n n\[UAcute]mero 3 como la de salida)\n\n\tdevuelve s siempre \
+que n es m\[UAcute]ltiplo de k y n en caso contrario para todo n > k > 0\n\t\
+Esto se puede ver r\[AAcute]pidamente si nos fijamos en las reglas \
+prioritarias que van consumiendo las ac y cambiandolas por \
+c\[CloseCurlyQuote] o c seg\[UAcute]n sea ac o ac\[CloseCurlyQuote] dicho de \
+otra forma se resta n-k \t\ten cada iteraci\[OAcute]n ya que desaparece una a \
+por cada c o c\[CloseCurlyQuote] y el n\[UAcute]mero de c o c\
+\[CloseCurlyQuote] permanece constante. De esta forma si n es \
+m\[UAcute]ltiplo de k cuando finalice obtendremos d y por \t\ttanto s (despu\
+\[EAcute]s de la disoluci\[OAcute]n). De no ser as\[IAcute] en la ultima \
+iteraci\[OAcute]n no habr\[AAcute] suficientes a que emparejar con las c o c\
+\[OpenCurlyQuote] por lo que algunas c o c\[CloseCurlyQuote] seg\[UAcute]n la \
+iteraci\[OAcute]n (ya que cada \t\titeraci\[OAcute]n se alternan c o c\
+\[CloseCurlyQuote]) por lo que el patr\[OAcute]n dcc\[CloseCurlyQuote] ser\
+\[AAcute] posible y entonces devolver\[AAcute] n.\n"
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQBmIQfeMFz9e/Qm8cK+yNvoHokCOLFVSE3zjeadqqBKJv
+56pqguiJl35FgGgpk2cxIFp7MVs8iD7zRD8ZRNdd0M8G0e/k05tAtA1zageI
+bjkS2Q+iHd2uzwPRr6qyF4PoRsf89SCaY7LjFhD9oyLhGYhm71R9A6JVAg3B
+dFZJzQ8QPWvrDTCtdGIlpyqQFvqZwQWi3521EwTRvZeviYLoWzV8MiB6W0wB
+mLb+MEkdRF87HKABovf4/tEB0S93nAgG0Qv6ZCNAtNv+c1Eg+rq/5VwQvWjZ
+k/kguk1+y1IQXSJ8cBWIFst+vxFsznSrbSB6zReP8yA6VuIFmNbgD/uiBnJ/
+b9B/EC1Y28OsDqQvva9jA9ESHUd4QHTJPV8pEF1zVyAERC9JuNIJosuUrbk1
+gHSHlSUPiHb5nSwCovNm3QDTALtVuDU=
+  "],
+ ExpressionUUID -> "edba80c8-433b-4c56-b122-5738aa279045"],
 
 Cell[CellGroupData[{
 
 Cell["Ejercicio 3:", "Chapter",
  CellChangeTimes->{{3.768053691951174*^9, 3.768053717238998*^9}, 
-   3.7680540159260263`*^9},ExpressionUUID->"ce405ede-fb31-44e8-ae60-\
-ed6294f9096a"],
+   3.7680540159260263`*^9},
+ ExpressionUUID -> "ce405ede-fb31-44e8-ae60-ed6294f9096a"],
 
 Cell["\<\
 Dise\[NTilde]e un m\[OAcute]dulo Mathematica que, dado como entrada un valor \
@@ -45,8 +136,8 @@ ejercicio 1(b) despu\[EAcute]s de aplicar n transiciones.\
 \>", "Text",
  CellFrame->{{0, 0}, {2, 0}},
  CellChangeTimes->{{3.768053722624592*^9, 3.7680538059991417`*^9}, 
-   3.768053869906457*^9},ExpressionUUID->"18ec818f-0474-4db3-8312-\
-8325b58f22ea"],
+   3.768053869906457*^9},
+ ExpressionUUID -> "18ec818f-0474-4db3-8312-8325b58f22ea"],
 
 Cell[BoxData[
  RowBox[{
@@ -56,75 +147,57 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-      "membrana", ",", " ", "aux", ",", " ", "randomNumber", ",", " ", 
-       "result", ",", " ", "i"}], "}"}], ",", "\n", "\t", "\n", "\t", 
+      "membrana", ",", " ", "randomNumber", ",", " ", "result", ",", " ", 
+       "i"}], "}"}], ",", "\n", "\t", "\n", "\t", 
      RowBox[{
       RowBox[{"membrana", " ", "=", " ", 
        RowBox[{"{", 
         RowBox[{"a", ",", " ", "a"}], "}"}]}], ";", "\n", "\t", 
       RowBox[{"result", " ", "=", " ", 
-       RowBox[{"{", "}"}]}], ";", "\n", "\t", "\n", "\t", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<\!\(\*SubscriptBox[\([\), \(1\)]\)\!\(\*SubscriptBox[\([\), \
+\(2\)]\)\!\(\*SubscriptBox[\(]\), \(2\)]\)\!\(\*SubscriptBox[\(]\), \
+\(1\)]\)\>\"", ",", " ", "membrana", ",", " ", 
+         RowBox[{"{", "}"}]}], "}"}]}], ";", "\n", "\t", "\n", "\t", 
       RowBox[{"For", "[", 
        RowBox[{
         RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
-        RowBox[{"i", " ", "\[LessEqual]", " ", "n"}], ",", " ", 
-        RowBox[{"i", "++"}], ",", "\n", "\t", "\n", "\t\t", 
         RowBox[{
-         RowBox[{"aux", " ", "=", " ", 
-          RowBox[{"{", "}"}]}], ";", "\n", "\t\t", "\n", "\t\t", 
-         RowBox[{"While", "[", 
+         RowBox[{"i", " ", "\[LessEqual]", " ", "n"}], " ", "&&", " ", 
+         RowBox[{
+          RowBox[{"Length", "[", "membrana", "]"}], " ", ">", " ", "0"}]}], 
+        ",", " ", 
+        RowBox[{"i", "++"}], ",", "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"randomNumber", " ", "=", " ", 
+          RowBox[{"RandomInteger", "[", "1", "]"}]}], ";", "\n", "\t\t", "\n",
+          "\t\t", 
+         RowBox[{"If", "[", 
           RowBox[{
+           RowBox[{"randomNumber", " ", "==", " ", "0"}], ",", "\n", "\t\t\t", 
            RowBox[{
-            RowBox[{"Length", "[", "membrana", "]"}], " ", ">", " ", "0"}], 
-           ",", "\n", "\t\t", "\n", "\t\t\t", 
+            RowBox[{
+             RowBox[{"result", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], " ", "=", " ", 
+             RowBox[{"Join", "[", 
+              RowBox[{
+               RowBox[{"result", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], ",", " ", 
+               RowBox[{"{", 
+                RowBox[{
+                "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c"}], 
+                "}"}]}], "]"}]}], ";"}]}], "\n", "\t\t", "]"}], ";", "\n", 
+         "\t\t\t", "\n", "\t\t", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"randomNumber", " ", "==", " ", "1"}], ",", "\n", "\t\t\t", 
            RowBox[{
-            RowBox[{"randomNumber", " ", "=", " ", 
-             RowBox[{"RandomInteger", "[", "1", "]"}]}], ";", "\n", "\t\t", 
-            "\n", "\t\t\t", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{"randomNumber", " ", "==", " ", "0"}], ",", "\n", 
-              "\t\t", "\n", "\t\t\t\t", 
-              RowBox[{
-               RowBox[{"membrana", " ", "=", " ", 
-                RowBox[{"Take", "[", 
-                 RowBox[{"membrana", ",", " ", 
-                  RowBox[{"-", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Length", "[", "membrana", "]"}], " ", "-", " ", 
-                    "1"}], ")"}]}]}], "]"}]}], ";", "\n", "\t\t\t\t", 
-               RowBox[{"AppendTo", "[", 
-                RowBox[{"aux", ",", " ", "a"}], "]"}], ";", "\n", "\t\t\t\t", 
-               
-               RowBox[{"result", " ", "=", " ", 
-                RowBox[{"Join", "[", 
-                 RowBox[{"result", ",", " ", 
-                  RowBox[{"{", 
-                   RowBox[{"b", ",", "c", ",", "c"}], "}"}]}], "]"}]}], 
-               ";"}]}], "\n", "\t\t\t", "]"}], ";", "\n", "\t\t\t", "\n", 
-            "\t\t\t", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"randomNumber", " ", "==", " ", "1"}], " ", "&&", " ", 
-               
-               RowBox[{
-                RowBox[{"Length", "[", "membrana", "]"}], " ", 
-                "\[GreaterEqual]", " ", "2"}]}], ",", "\n", "\t\t\t", "\n", 
-              "\t\t\t\t", 
-              RowBox[{
-               RowBox[{"membrana", " ", "=", " ", 
-                RowBox[{"Take", "[", 
-                 RowBox[{"membrana", ",", " ", 
-                  RowBox[{"-", 
-                   RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Length", "[", "membrana", "]"}], " ", "-", " ", 
-                    "2"}], ")"}]}]}], "]"}]}], ";"}]}], "\n", "\t\t\t", "]"}],
-             ";"}]}], "\n", "\t\t", "]"}], ";", "\n", "\t\t", 
-         RowBox[{"membrana", " ", "=", " ", "aux"}], ";"}]}], "\n", "\t", 
-       "]"}], ";", "\n", "\t", 
+            RowBox[{
+             RowBox[{"result", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], " ", "=", " ", 
+             RowBox[{"{", "}"}]}], ";"}]}], "\n", "\t\t", "]"}], ";"}]}], 
+       "\n", "\t", "]"}], ";", "\n", "\t", "\n", "\t", 
       RowBox[{"Return", "[", "result", "]"}], ";"}]}], "\n", "]"}]}], 
   ";"}]], "Code",
  CellChangeTimes->{{3.7680538804602547`*^9, 3.768053897118288*^9}, {
@@ -132,32 +205,49 @@ Cell[BoxData[
   3.768056196669383*^9}, {3.768056323966963*^9, 3.768056359339039*^9}, {
   3.76805643197512*^9, 3.7680565410806217`*^9}, {3.768056582985211*^9, 
   3.768056737309061*^9}, {3.7680568747324743`*^9, 3.7680568782137127`*^9}, {
-  3.768056987220921*^9, 3.768056988182576*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"5dfdec60-5098-49b8-90c2-64c93075f1c3"],
+  3.768056987220921*^9, 3.768056988182576*^9}, {3.768138903996084*^9, 
+  3.768138908183899*^9}, {3.7681389761102657`*^9, 3.768138981584365*^9}, {
+  3.768139076821722*^9, 3.768139168281534*^9}, {3.768139230436215*^9, 
+  3.768139265462335*^9}, {3.7681393302418623`*^9, 3.768139345450315*^9}, {
+  3.7681393949902897`*^9, 3.7681394146193132`*^9}, {3.768139453564377*^9, 
+  3.7681395782860117`*^9}, {3.768139916659466*^9, 3.76813991719459*^9}},
+ ExpressionUUID -> "5dfdec60-5098-49b8-90c2-64c93075f1c3"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Ej3", "[", "8", "]"}]], "Input",
- CellChangeTimes->{{3.768056757847471*^9, 3.768056796636846*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"8b7b42a3-3ad0-4591-a628-bc252c05ad06"],
+ RowBox[{"Ej3", "[", "3", "]"}]], "Input",
+ CellChangeTimes->{{3.768056757847471*^9, 3.768056796636846*^9}, {
+  3.768139601511981*^9, 3.768139606722475*^9}, {3.768139659185734*^9, 
+  3.768139659240966*^9}},
+ ExpressionUUID -> "8b7b42a3-3ad0-4591-a628-bc252c05ad06"],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{
-  "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c", 
-   ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", ",", 
-   "b", ",", "c", ",", "c"}], "}"}]], "Output",
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\([\\), \
+\\(1\\)]\\)\\!\\(\\*SubscriptBox[\\([\\), \
+\\(2\\)]\\)\\!\\(\\*SubscriptBox[\\(]\\), \
+\\(2\\)]\\)\\!\\(\\*SubscriptBox[\\(]\\), \\(1\\)]\\)\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c",
+      ",", "c", ",", "b", ",", "c", ",", "c", ",", "b", ",", "c", ",", "c", 
+     ",", "b", ",", "c", ",", "c"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{
-  3.768056944135261*^9, {3.768057007066938*^9, 3.768057020931094*^9}},
- CellLabel->"Out[2]=",ExpressionUUID->"c74e008d-44e7-4ee0-b00c-bd15e564f7f9"]
+  3.768056944135261*^9, {3.768057007066938*^9, 3.768057020931094*^9}, {
+   3.768138854775804*^9, 3.768138876378071*^9}, {3.768139582454814*^9, 
+   3.768139672738076*^9}},
+ ExpressionUUID -> "c74e008d-44e7-4ee0-b00c-bd15e564f7f9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 1022},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
-FrontEndVersion->"12.0 para Linux x86 (64-bit) (April 8, 2019)",
+WindowSize->{1280, 695},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 para Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -172,15 +262,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 212, 4, 99, "Title",ExpressionUUID->"843a9461-4ca2-4599-a95c-5570889b9bab"],
-Cell[795, 28, 200, 3, 36, "Text",ExpressionUUID->"edba80c8-433b-4c56-b122-5738aa279045"],
+Cell[580, 22, 212, 4, 92, "Title"],
+Cell[795, 28, 5499, 94, 708, "Text"],
 Cell[CellGroupData[{
-Cell[1020, 35, 182, 3, 70, "Chapter",ExpressionUUID->"ce405ede-fb31-44e8-ae60-ed6294f9096a"],
-Cell[1205, 40, 420, 8, 46, "Text",ExpressionUUID->"18ec818f-0474-4db3-8312-8325b58f22ea"],
-Cell[1628, 50, 3818, 85, 670, "Code",ExpressionUUID->"5dfdec60-5098-49b8-90c2-64c93075f1c3"],
+Cell[6319, 126, 184, 3, 65, "Chapter"],
+Cell[6506, 131, 422, 8, 40, "Text"],
+Cell[6931, 141, 3283, 72, 395, "Code"],
 Cell[CellGroupData[{
-Cell[5471, 139, 200, 3, 31, "Input",ExpressionUUID->"8b7b42a3-3ad0-4591-a628-bc252c05ad06"],
-Cell[5674, 144, 413, 8, 35, "Output",ExpressionUUID->"c74e008d-44e7-4ee0-b00c-bd15e564f7f9"]
+Cell[10239, 217, 279, 5, 32, "Input"],
+Cell[10521, 224, 789, 17, 32, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
